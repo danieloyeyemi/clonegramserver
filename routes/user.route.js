@@ -1,0 +1,13 @@
+const express = require('express')
+const router = express.Router()
+const userController = require('../controllers/user.controller')
+router.post('/signup',userController.registerUser)
+router.post('/login',userController.login)
+router.post('/upload',userController.UploadFile)
+router.get('/dashboard',userController.getDashboard)
+router.post("/getimage", userController.setProfile)
+router.get("/getPost", userController.getPost )
+router.post("/comment", userController.comment )
+router.get("/getalluser", userController.getAllUser )
+// router.post("/getimage", userController.setProfile)
+module.exports = router
